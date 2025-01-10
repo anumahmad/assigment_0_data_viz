@@ -1,7 +1,7 @@
 // setup() is called once at page-load
 function setup() {
     // i took inspiration from https://p5js.org/examples/repetition-color-wheel/ for the colors and positioning
-    createCanvas(2000, 1200);
+    createCanvas(1000, 1000);
     background(0);
 
     // Use Hue Saturation Brightness colors without stroke
@@ -56,20 +56,20 @@ function draw() {
         rotate(angle);
 
         // Move out of the center based on the distance (max is farthest and min is closest)
-        translate(adjusted_angle*1.5, 0);
+        translate(adjusted_angle*1.3, 0);
 
         // Set fill using current angle as hue
         fill(adjusted_angle, 50, 20);
         if (sec*6 == adjusted_angle){
             fill((angle + 60)%360, 10,50);}
         if (min*6 == adjusted_angle){
-            fill((angle + 60)%360, 20, 50);}
+            fill((angle + 60)%360, 50, 50);}
         if ((hr%12)*30 == adjusted_angle){
             fill((angle + 60)%360, 100, 100);}
 
 
         // Draw a circle at current origin (150 pixels from center)
-        circle(0, 0, 15, 10);
+        circle(0, 0, 10, 10);
 
 
         // Restore canvas transformation

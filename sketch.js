@@ -43,7 +43,7 @@ function draw() {
         // second_color = 0;
 
         if (sec == 0){
-            print(min);
+            console.log(min);
         }
 
         // Save current transformation
